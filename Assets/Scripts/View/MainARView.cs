@@ -1,16 +1,22 @@
-using VContainer;
+using System;
+using UniRx;
 using UnityEngine;
 
+interface IMainARViewable
+{
+    void showErrorOnLidar();
+    Subject<Unit> lifeCycleAwake { get; }
+}
 public class MainARView : MonoBehaviour
 {
-    void Start()
+    public Subject<Unit> lifeCycleAwake = new Subject<Unit>();
+    private void Awake()
     {
-        
+        lifeCycleAwake.OnNext(Unit.Default);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void showErrorOnLidar()
     {
-        
+       // show Error 
     }
 }
