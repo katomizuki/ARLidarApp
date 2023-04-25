@@ -1,16 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
-using UniRx;
 using UnityEngine;
 using UnityEngine.XR;
-using UnityEngine.XR.ARFoundation;
-using UnityEngine.XR.ARKit;
 
 public interface IMainARService
 {
     bool IsARLidarSupported();
-    bool IsARCollaboration();
-    bool IsARWorldMap();
     void UpdateLifeCycle();
 }
 public class MainARService : IMainARService 
@@ -21,16 +16,6 @@ public class MainARService : IMainARService
         var subsystems = new List<XRMeshSubsystem>();
         SubsystemManager.GetInstances(subsystems);
         return subsystems.Any();
-    }
-
-    public bool IsARCollaboration()
-    {
-        return ARKitSessionSubsystem.supportsCollaboration;
-    }
-
-    public bool IsARWorldMap()
-    {
-        return ARKitSessionSubsystem.worldMapSupported;
     }
 
     public void UpdateLifeCycle()

@@ -1,5 +1,3 @@
-using UnityEngine;
-using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARKit;
 
     public interface IAROverlayService
@@ -13,3 +11,4 @@ using UnityEngine.XR.ARKit;
             return ARKitSessionSubsystem.coachingOverlaySupported;
         } 
     }
+  

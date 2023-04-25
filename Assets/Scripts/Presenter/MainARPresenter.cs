@@ -7,17 +7,15 @@ public class MainARPresenter : IInitializable
 {
     private readonly MainARView _mainARView;
     private readonly IMainARService _mainARService;
-    private readonly IAROverlayService _arOverlayService;
+   
     
     [Inject]
     public MainARPresenter(
         MainARView mainARView, 
-        IMainARService mainARService,
-        IAROverlayService arOverlayService)
+        IMainARService mainARService)
     {
         _mainARView = mainARView;
         _mainARService = mainARService;
-        _arOverlayService = arOverlayService;
     }
 
     public void Initialize()

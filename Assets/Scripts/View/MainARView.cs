@@ -1,12 +1,6 @@
-using System;
 using UniRx;
 using UnityEngine;
 
-interface IMainARViewable
-{
-    void showErrorOnLidar();
-    Subject<Unit> lifeCycleAwake { get; }
-}
 public class MainARView : MonoBehaviour
 {
     public Subject<Unit> lifeCycleAwake = new Subject<Unit>();
@@ -17,6 +11,6 @@ public class MainARView : MonoBehaviour
 
     public void showErrorOnLidar()
     {
-       // show Error 
+        Debug.Log("not supported Lidar");
     }
 }
