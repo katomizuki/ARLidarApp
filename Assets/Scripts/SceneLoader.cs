@@ -1,8 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using VContainer;
 using VContainer.Unity;
 
 namespace FirstScene 
@@ -49,10 +47,10 @@ namespace FirstScene
         
         private IEnumerator LoadSceneAsync()
         {
-            // LifetimeScope generated in this block will be parented by `this.lifetimeScope`
+            // 引数のLifeTimeScopeを親にして、子のLifeTimeScopeから参照できるようにする
             using (LifetimeScope.EnqueueParent(scoreLifetimeScope))
             {
-                // If this scene has a LifetimeScope, its parent will be `parent`.
+                // Addptive=>現在のシーンにシーンを追加。Singleton=>シーンが一つだけであることを保証。
                 var loading = SceneManager.LoadSceneAsync("ARScene", LoadSceneMode.Additive);
                 while (!loading.isDone)
                 {
