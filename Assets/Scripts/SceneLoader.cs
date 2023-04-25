@@ -1,10 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using VContainer;
+using VContainer.Unity;
 
 namespace FirstScene 
 {
     public class SceneLoader : MonoBehaviour
     {
+        [SerializeField] private LifetimeScope scoreLifetimeScope;
         public void OnTapOrangeScenePanel()
         {
 #if DEBUG
@@ -39,7 +44,21 @@ namespace FirstScene
 
         private void LoadScene()
         {
-            SceneManager.LoadScene("ARScene");
+            StartCoroutine(LoadSceneAsync());
+        }
+        
+        private IEnumerator LoadSceneAsync()
+        {
+            // LifetimeScope generated in this block will be parented by `this.lifetimeScope`
+            using (LifetimeScope.EnqueueParent(scoreLifetimeScope))
+            {
+                // If this scene has a LifetimeScope, its parent will be `parent`.
+                var loading = SceneManager.LoadSceneAsync("ARScene", LoadSceneMode.Additive);
+                while (!loading.isDone)
+                {
+                    yield return null;
+                }
+            }
         }
     } 
 }
