@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d653a34-9572-401b-9520-3e23e442db4d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LidarAR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LidarAR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/CameraRenderTexture.renderTexture" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/CameraRenderTexture.renderTexture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Sample.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Sample.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Shader Graphs_MusicShaderGraph.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Material/Shader Graphs_MusicShaderGraph.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RiderFlow.UserData/Editor/Scenes/Bookmarks.Map/6dc277268f8a446fea560e61638c14f9.userdata" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RiderFlow.UserData/Editor/Scenes/Bookmarks.Map/6dc277268f8a446fea560e61638c14f9.userdata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/MusicShaderGraph.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/MusicShaderGraph.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shader/ProceduralPattern.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shader/ProceduralPattern.shadergraph" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +96,7 @@
       <workItem from="1681468430574" duration="6493000" />
       <workItem from="1682254701553" duration="2468000" />
       <workItem from="1682425410859" duration="5097000" />
+      <workItem from="1682514027103" duration="281000" />
     </task>
     <servers />
   </component>
