@@ -29,7 +29,7 @@ public class MainARPresenter : IInitializable
                     _mainARView.ShowErrorOnLidar();
                     return;
                 }
-                
+
                 _mainARService.SetARLidarEffect(_mainARView.arMeshManager);
             }).AddTo(_mainARView);
 

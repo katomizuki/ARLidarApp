@@ -313,9 +313,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 718420180}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: OnTapPurpleScenePanel
+      - m_Target: {fileID: 718420181}
+        m_TargetAssemblyTypeName: SelectMenuView, Assembly-CSharp
+        m_MethodName: OnTapOrangeScenePanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -447,9 +447,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 718420180}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: OnTapBlueScenePanel
+      - m_Target: {fileID: 718420181}
+        m_TargetAssemblyTypeName: SelectMenuView, Assembly-CSharp
+        m_MethodName: OnTapPurpleScenePanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -791,9 +791,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 718420179}
-  - component: {fileID: 718420180}
+  - component: {fileID: 718420181}
   m_Layer: 0
-  m_Name: SceneLoader
+  m_Name: SelectMenuView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -806,7 +806,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718420178}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 642, y: 1389, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -814,7 +814,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &718420180
+--- !u!114 &718420181
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -823,9 +823,60 @@ MonoBehaviour:
   m_GameObject: {fileID: 718420178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 409b867c6be274912ae26d5007067eab, type: 3}
+  m_Script: {fileID: 11500000, guid: efa640fd80949452da66ba768a9a44c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _selectSceneId:
+    value: 0
+--- !u!1 &778084309
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 778084311}
+  - component: {fileID: 778084310}
+  m_Layer: 0
+  m_Name: SelectMenuDI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &778084310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778084309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99565d3de490f47d4ac512b8da15429d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentReference:
+    TypeName: 
+  autoRun: 1
+  autoInjectGameObjects: []
+  _selectMenuView: {fileID: 718420181}
+--- !u!4 &778084311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 778084309}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &803644429
 GameObject:
   m_ObjectHideFlags: 0
@@ -1293,9 +1344,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 718420180}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: OnTapOrangeScenePanel
+      - m_Target: {fileID: 718420181}
+        m_TargetAssemblyTypeName: SelectMenuView, Assembly-CSharp
+        m_MethodName: OnTapGreenScenePanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1755,9 +1806,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 718420180}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: OnTapGreenScenePanel
+      - m_Target: {fileID: 718420181}
+        m_TargetAssemblyTypeName: SelectMenuView, Assembly-CSharp
+        m_MethodName: OnTapBlueScenePanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
