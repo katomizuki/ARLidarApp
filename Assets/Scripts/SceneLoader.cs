@@ -1,20 +1,17 @@
-using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using VContainer.Unity;
 
 namespace FirstScene 
 {
     public class SceneLoader : MonoBehaviour
     {
-        [SerializeField] private LifetimeScope scoreLifetimeScope;
         public void OnTapOrangeScenePanel()
         {
 #if DEBUG
             Debug.Log("OnTapOrangeScenePanel");   
 #endif
             LoadScene();
+            CurrentEffect.currentEffect = ARLidarEffect.Texture;
         }
 
         public void OnTapGreenScenePanel()
@@ -23,6 +20,7 @@ namespace FirstScene
             Debug.Log("OnTapGreenScenePanel");
 #endif 
             LoadScene();
+            CurrentEffect.currentEffect = ARLidarEffect.Vertex;
         }
 
         public void OnTapBlueScenePanel()
@@ -31,6 +29,7 @@ namespace FirstScene
             Debug.Log("OnTapBlueScenePanel");
 #endif
             LoadScene();
+            CurrentEffect.currentEffect = ARLidarEffect.PointCloud;
         }
 
         public void OnTapPurpleScenePanel()
@@ -39,26 +38,12 @@ namespace FirstScene
             Debug.Log("OnTapPurpleScenePanel");
 #endif
             LoadScene();
+            CurrentEffect.currentEffect = ARLidarEffect.ScanLine;
         }
 
         private void LoadScene()
         {
-            StartCoroutine(LoadSceneAsync());
-        }
-        
-        private IEnumerator LoadSceneAsync()
-        {
-            // 引数のLifeTimeScopeを親にして、子のLifeTimeScopeから参照できるようにする
-            using (LifetimeScope.EnqueueParent(scoreLifetimeScope))
-            {
-                // Addptive=>現在のシーンにシーンを追加。Singleton=>シーンが一つだけであることを保証。
-                var loading = SceneManager.LoadSceneAsync("ARScene", LoadSceneMode.Additive);
-                loading.completed += x => SceneManager.SetActiveScene(SceneManager.GetSceneByName("ARScene"));
-                while (!loading.isDone)
-                {
-                    yield return null;
-                }
-            }
+            SceneManager.LoadScene("ARScene", LoadSceneMode.Single);
         }
     } 
 }

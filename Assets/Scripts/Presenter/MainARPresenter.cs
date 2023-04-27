@@ -1,6 +1,4 @@
 using UniRx;
-using UniRx.Triggers;
-using UnityEngine;
 using VContainer;
 using VContainer.Unity;
 
@@ -8,24 +6,19 @@ public class MainARPresenter : IInitializable
 {
     private readonly MainARView _mainARView;
     private readonly IMainARService _mainARService;
-    private readonly ARLidarEffect _arLidarEffect;
    
     
     [Inject]
     public MainARPresenter(
         MainARView mainARView, 
-        IMainARService mainARService, 
-        ARLidarEffect arLidarEffect)
+        IMainARService mainARService)
     {
         _mainARView = mainARView;
         _mainARService = mainARService;
-        _arLidarEffect = arLidarEffect;
-        Debug.Log(arLidarEffect+"きたーーーー");
     }
 
     public void Initialize()
     {
-        
         
         _mainARView.lifeCycleAwake
             .Subscribe(_ =>
@@ -33,15 +26,18 @@ public class MainARPresenter : IInitializable
                 var lidarSupported = _mainARService.IsARLidarSupported();
                 if (!lidarSupported)
                 {
-                    _mainARView.showErrorOnLidar();
+                    _mainARView.ShowErrorOnLidar();
                     return;
                 }
+                
+                var currentEffect = CurrentEffect.currentEffect;
+                _mainARService.SetARLidarEffect(currentEffect, _mainARView.arMeshManager);
             }).AddTo(_mainARView);
 
-        _mainARView.UpdateAsObservable()
-            .Subscribe(_ =>
+        _mainARView.ObserveEveryValueChanged(view => view.isTapButton.Value)
+            .Subscribe(value =>
             {
-                
+                if (value) _mainARView.BackMenuScene(); 
             }).AddTo(_mainARView);
     }
 }
