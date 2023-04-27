@@ -6,28 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="6d653a34-9572-401b-9520-3e23e442db4d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LidarAR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LidarAR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Shader Graphs_NoiseGiraGira.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Shader Graphs_NoiseGiraGira.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Shader Graphs_Pattern.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Shader Graphs_Pattern.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Shader Graphs_ProceduralPattern.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Shader Graphs_ProceduralPattern.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Shader Graphs_Scanline.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Shader Graphs_Scanline.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Shader Graphs_TextureEffect.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Material/Shader Graphs_TextureEffect.mat.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ARScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ARScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DI/EffectChildDI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DI/EffectChildDI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DI/EffectDI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DI/EffectDI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CurrentEffect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CurrentEffect.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/MainARService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/MainARService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presenter/MainARPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Presenter/MainARPresenter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SceneLoader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainARView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/MainARView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +20,6 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CurrentEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utility/ARDensePointCloudManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utility/ColorDebug.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.kyrylokuzyk.arfoundationremote@310ce4c72631/Editor/ARFoundationRemoteLoader.cs" root0="FORCE_HIGHLIGHTING" />
@@ -110,7 +94,8 @@
       <workItem from="1682254701553" duration="2468000" />
       <workItem from="1682425410859" duration="5097000" />
       <workItem from="1682514027103" duration="738000" />
-      <workItem from="1682547051569" duration="12228000" />
+      <workItem from="1682547051569" duration="12490000" />
+      <workItem from="1682633437623" duration="1658000" />
     </task>
     <servers />
   </component>

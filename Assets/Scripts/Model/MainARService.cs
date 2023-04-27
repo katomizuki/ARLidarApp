@@ -8,7 +8,7 @@ public interface IMainARService
 {
     bool IsARLidarSupported();
     void UpdateLifeCycle();
-    void SetARLidarEffect(ARLidarEffect currentEffect, ARMeshManager arMeshManager);
+    void SetARLidarEffect(ARMeshManager arMeshManager);
 }
 public class MainARService : IMainARService
 {
@@ -25,27 +25,30 @@ public class MainARService : IMainARService
         // do something
     }
     
-    public void SetARLidarEffect(ARLidarEffect currentEffect, ARMeshManager arMeshManager)
+    public void SetARLidarEffect(ARMeshManager arMeshManager)
     {
+        
         Material mat;
+        var currentEffect = PlayerPrefs.GetInt("Effect");
         switch (currentEffect)
         {
-            case ARLidarEffect.Texture:
+            case 1:
                 mat = Resources.Load<Material>("Materials/Shader Graphs_NoiseGiraGira");
                 break;
-            case ARLidarEffect.Vertex:
+            case 2:
                 mat = Resources.Load<Material>("Materials/Shader Graphs_Pattern");
                 break;
-            case ARLidarEffect.PointCloud:
+            case 3:
                 mat = Resources.Load<Material>("Materials/Shader Graphs_Scanline");
                 break;
-            case ARLidarEffect.ScanLine:
+            case 4:
                 mat = Resources.Load<Material>("Materials/Shader Graphs_TextureEffect");
                 break;
             default:
                 mat = Resources.Load<Material>("Materials/TextureEffect");
                 break;
         }
-        arMeshManager.GetComponent<MeshRenderer>().material = mat; 
+        arMeshManager.meshPrefab.gameObject.GetComponent<MeshRenderer>().material = mat; 
+        if (arMeshManager.meshPrefab.gameObject.GetComponent<MeshRenderer>().material == null) Debug.Log("さいや");
     }
 }

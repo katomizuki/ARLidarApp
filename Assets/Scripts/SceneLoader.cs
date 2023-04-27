@@ -11,7 +11,7 @@ namespace FirstScene
             Debug.Log("OnTapOrangeScenePanel");   
 #endif
             LoadScene();
-            CurrentEffect.currentEffect = ARLidarEffect.Texture;
+            PlayerPrefs.SetInt("Effect",1);
         }
 
         public void OnTapGreenScenePanel()
@@ -20,7 +20,7 @@ namespace FirstScene
             Debug.Log("OnTapGreenScenePanel");
 #endif 
             LoadScene();
-            CurrentEffect.currentEffect = ARLidarEffect.Vertex;
+            PlayerPrefs.SetInt("Effect",2);
         }
 
         public void OnTapBlueScenePanel()
@@ -29,7 +29,7 @@ namespace FirstScene
             Debug.Log("OnTapBlueScenePanel");
 #endif
             LoadScene();
-            CurrentEffect.currentEffect = ARLidarEffect.PointCloud;
+            PlayerPrefs.SetInt("Effect",3);
         }
 
         public void OnTapPurpleScenePanel()
@@ -38,7 +38,7 @@ namespace FirstScene
             Debug.Log("OnTapPurpleScenePanel");
 #endif
             LoadScene();
-            CurrentEffect.currentEffect = ARLidarEffect.ScanLine;
+            PlayerPrefs.SetInt("Effect",4);
         }
 
         private void LoadScene()

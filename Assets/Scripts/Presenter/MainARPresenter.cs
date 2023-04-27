@@ -30,8 +30,7 @@ public class MainARPresenter : IInitializable
                     return;
                 }
                 
-                var currentEffect = CurrentEffect.currentEffect;
-                _mainARService.SetARLidarEffect(currentEffect, _mainARView.arMeshManager);
+                _mainARService.SetARLidarEffect(_mainARView.arMeshManager);
             }).AddTo(_mainARView);
 
         _mainARView.ObserveEveryValueChanged(view => view.isTapButton.Value)
