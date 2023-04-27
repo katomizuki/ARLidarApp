@@ -8,7 +8,7 @@ public interface IMainARService
 {
     bool IsARLidarSupported();
     void UpdateLifeCycle();
-    void SetARLidarEffect(ARMeshManager arMeshManager);
+    Material GetARMaterial();
 }
 public class MainARService : IMainARService
 {
@@ -25,7 +25,7 @@ public class MainARService : IMainARService
         // do something
     }
     
-    public void SetARLidarEffect(ARMeshManager arMeshManager)
+    public Material GetARMaterial()
     {
         
         Material mat;
@@ -48,6 +48,7 @@ public class MainARService : IMainARService
                 mat = Resources.Load<Material>("Materials/TextureEffect");
                 break;
         }
-        arMeshManager.meshPrefab.gameObject.GetComponent<MeshRenderer>().material = mat; 
+
+        return mat;
     }
 }

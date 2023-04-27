@@ -30,7 +30,8 @@ public class MainARPresenter : IInitializable
                     return;
                 }
 
-                _mainARService.SetARLidarEffect(_mainARView.arMeshManager);
+                var material = _mainARService.GetARMaterial();
+                _mainARView.ShowAREffect(material);
             }).AddTo(_mainARView);
 
         _mainARView.ObserveEveryValueChanged(view => view.isTapButton.Value)

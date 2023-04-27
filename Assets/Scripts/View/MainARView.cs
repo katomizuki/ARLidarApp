@@ -8,7 +8,8 @@ public class MainARView : MonoBehaviour
     public Subject<Unit> lifeCycleAwake = new Subject<Unit>();
     [HideInInspector]
     public ReactiveProperty<bool> isTapButton = new ReactiveProperty<bool>(false);
-    public ARMeshManager arMeshManager;
+    [SerializeField] 
+    private ARMeshManager arMeshManager;
     private void Awake()
     {
         lifeCycleAwake.OnNext(Unit.Default);
@@ -27,5 +28,10 @@ public class MainARView : MonoBehaviour
     public void BackMenuScene()
     {
         SceneManager.LoadScene("FirstScene", LoadSceneMode.Single);
+    }
+
+    public void ShowAREffect(Material material)
+    {
+        arMeshManager.meshPrefab.gameObject.GetComponent<MeshRenderer>().material = material; 
     }
 }
