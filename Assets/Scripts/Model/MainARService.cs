@@ -49,6 +49,5 @@ public class MainARService : IMainARService
                 break;
         }
         arMeshManager.meshPrefab.gameObject.GetComponent<MeshRenderer>().material = mat; 
-        if (arMeshManager.meshPrefab.gameObject.GetComponent<MeshRenderer>().material == null) Debug.Log("さいや");
     }
 }
