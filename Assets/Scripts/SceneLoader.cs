@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -52,6 +53,7 @@ namespace FirstScene
             {
                 // Addptive=>現在のシーンにシーンを追加。Singleton=>シーンが一つだけであることを保証。
                 var loading = SceneManager.LoadSceneAsync("ARScene", LoadSceneMode.Additive);
+                loading.completed += x => SceneManager.SetActiveScene(SceneManager.GetSceneByName("ARScene"));
                 while (!loading.isDone)
                 {
                     yield return null;
