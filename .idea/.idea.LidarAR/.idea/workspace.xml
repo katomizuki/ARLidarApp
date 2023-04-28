@@ -6,21 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6d653a34-9572-401b-9520-3e23e442db4d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LidarAR/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LidarAR/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ARScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ARScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DI/ARCoachingDIContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DI/ARCoachingDIContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DI/MainARDIContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DI/MainARDIContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DI/SelectMenuDI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DI/SelectMenuDI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/AROverlayService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/AROverlayService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/LocalStorageService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/LocalStorageService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Model/MainARService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Model/MainARService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presenter/ARCoachingPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Presenter/ARCoachingPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presenter/BackButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presenter/BackButton.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presenter/MainARPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Presenter/MainARPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Presenter/SelectMenuPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Presenter/SelectMenuPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/ARCoachingOverlayView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/ARCoachingOverlayView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/MainARView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/MainARView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/View/SelectMenuView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/View/SelectMenuView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/RiderFlow.UserData/Editor/Scenes/Bookmarks.Map/6dc277268f8a446fea560e61638c14f9.userdata" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/RiderFlow.UserData/Editor/Scenes/Bookmarks.Map/6dc277268f8a446fea560e61638c14f9.userdata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/FirstScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/FirstScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
