@@ -1,6 +1,8 @@
+using Model;
 using VContainer.Unity;
 using UniRx;
 using VContainer;
+using View;
 
 namespace Presenter
 {

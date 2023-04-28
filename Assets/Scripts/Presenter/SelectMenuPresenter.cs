@@ -1,32 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
+using Model;
 using UniRx;
 using VContainer;
 using VContainer.Unity;
+using View;
 
-public class SelectMenuPresenter: IInitializable 
+namespace Presenter
 {
-    private SelectMenuView _selectMenuView;
-    private ILocalStorageService _localStorageService;
-    
-    [Inject]
-    public SelectMenuPresenter(
-        SelectMenuView selectMenuView,
-        ILocalStorageService localStorageService)
+    public class SelectMenuPresenter: IInitializable 
     {
-        _selectMenuView = selectMenuView;
-        _localStorageService = localStorageService;
-    }
+        private SelectMenuView _selectMenuView;
+        private ILocalStorageService _localStorageService;
+    
+        [Inject]
+        public SelectMenuPresenter(
+            SelectMenuView selectMenuView,
+            ILocalStorageService localStorageService)
+        {
+            _selectMenuView = selectMenuView;
+            _localStorageService = localStorageService;
+        }
         
     
-    public void Initialize()
-    {
-        _selectMenuView._selectSceneId
-            .Subscribe(id =>
-            {
-                _localStorageService.SetLoalStorage("Effect", id);
-                _selectMenuView.LoadScene();
-            }).AddTo(_selectMenuView);
-    }
+        public void Initialize()
+        {
+            _selectMenuView._selectSceneId
+                .Subscribe(id =>
+                {
+                    _localStorageService.SetLoalStorage("Effect", id);
+                    _selectMenuView.LoadScene();
+                }).AddTo(_selectMenuView);
+        }
         
+    }
 }

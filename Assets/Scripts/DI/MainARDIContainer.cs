@@ -1,6 +1,9 @@
+using Model;
+using Presenter;
 using UnityEngine;
 using VContainer.Unity;
 using VContainer;
+using View;
 
 namespace DI 
 {

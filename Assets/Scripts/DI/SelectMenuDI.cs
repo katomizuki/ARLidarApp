@@ -1,14 +1,20 @@
+using Model;
+using Presenter;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
+using View;
 
-public class SelectMenuDI : LifetimeScope 
+namespace DI
 {
-    [SerializeField] SelectMenuView _selectMenuView;
-    protected override void Configure(IContainerBuilder builder)
+    public class SelectMenuDI : LifetimeScope 
     {
-        builder.RegisterEntryPoint<SelectMenuPresenter>();
-        builder.Register<ILocalStorageService, LocalStorageService>(Lifetime.Singleton);
-        builder.RegisterComponent<SelectMenuView>(_selectMenuView);
+        [SerializeField] SelectMenuView _selectMenuView;
+        protected override void Configure(IContainerBuilder builder)
+        {
+            builder.RegisterEntryPoint<SelectMenuPresenter>();
+            builder.Register<ILocalStorageService, LocalStorageService>(Lifetime.Singleton);
+            builder.RegisterComponent<SelectMenuView>(_selectMenuView);
+        }
     }
 }

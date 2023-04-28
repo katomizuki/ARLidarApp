@@ -2,7 +2,8 @@ using Presenter;
 using UnityEngine;
 using VContainer;
 using VContainer.Unity;
-using Lidar;
+using Model;
+using View;
 
 namespace DI
 {

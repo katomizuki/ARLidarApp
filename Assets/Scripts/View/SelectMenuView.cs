@@ -2,44 +2,47 @@ using UniRx;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SelectMenuView : MonoBehaviour
+namespace View
 {
-    [HideInInspector]
-    public ReactiveProperty<int> _selectSceneId = new ReactiveProperty<int>(0);
-    public void OnTapOrangeScenePanel()
+    public class SelectMenuView : MonoBehaviour
     {
-        _selectSceneId.Value = 1; 
+        [HideInInspector]
+        public ReactiveProperty<int> _selectSceneId = new ReactiveProperty<int>(0);
+        public void OnTapOrangeScenePanel()
+        {
+            _selectSceneId.Value = 1; 
 #if DEBUG
-        Debug.Log("OnTapOrangeScenePanel");   
+            Debug.Log("OnTapOrangeScenePanel");   
 #endif
-    }
+        }
 
-    public void OnTapGreenScenePanel()
-    {
-        _selectSceneId.Value = 2; 
+        public void OnTapGreenScenePanel()
+        {
+            _selectSceneId.Value = 2; 
 #if DEBUG
-        Debug.Log("OnTapGreenScenePanel");
+            Debug.Log("OnTapGreenScenePanel");
 #endif 
-    }
+        }
 
-    public void OnTapBlueScenePanel()
-    {
-        _selectSceneId.Value = 3; 
+        public void OnTapBlueScenePanel()
+        {
+            _selectSceneId.Value = 3; 
 #if DEBUG
-        Debug.Log("OnTapBlueScenePanel");
+            Debug.Log("OnTapBlueScenePanel");
 #endif
-    }
+        }
 
-    public void OnTapPurpleScenePanel()
-    {
-        _selectSceneId.Value = 4; 
+        public void OnTapPurpleScenePanel()
+        {
+            _selectSceneId.Value = 4; 
 #if DEBUG
-        Debug.Log("OnTapPurpleScenePanel");
+            Debug.Log("OnTapPurpleScenePanel");
 #endif
-    }
+        }
 
-    public void LoadScene()
-    {
-        SceneManager.LoadScene("ARScene", LoadSceneMode.Single);
-    } 
+        public void LoadScene()
+        {
+            SceneManager.LoadScene("ARScene", LoadSceneMode.Single);
+        } 
+    }
 }

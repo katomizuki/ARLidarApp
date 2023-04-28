@@ -1,5 +1,7 @@
 using UnityEngine.XR.ARKit;
 
+namespace Model
+{
     public interface IAROverlayService
     {
         bool IsAROverlayCoaching();
@@ -11,4 +13,4 @@ using UnityEngine.XR.ARKit;
             return ARKitSessionSubsystem.coachingOverlaySupported;
         } 
     }
-  
+}
