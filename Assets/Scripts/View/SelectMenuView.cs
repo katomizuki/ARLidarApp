@@ -6,11 +6,10 @@ namespace View
 {
     public class SelectMenuView : MonoBehaviour
     {
-        [HideInInspector]
-        public ReactiveProperty<int> _selectSceneId = new ReactiveProperty<int>(0);
+        [HideInInspector] public Subject<int> _selectSceneId = new Subject<int>();
         public void OnTapOrangeScenePanel()
         {
-            _selectSceneId.Value = 1; 
+            _selectSceneId.OnNext(1); 
 #if DEBUG
             Debug.Log("OnTapOrangeScenePanel");   
 #endif
@@ -18,7 +17,7 @@ namespace View
 
         public void OnTapGreenScenePanel()
         {
-            _selectSceneId.Value = 2; 
+            _selectSceneId.OnNext(2); 
 #if DEBUG
             Debug.Log("OnTapGreenScenePanel");
 #endif 
@@ -26,7 +25,7 @@ namespace View
 
         public void OnTapBlueScenePanel()
         {
-            _selectSceneId.Value = 3; 
+            _selectSceneId.OnNext(3); 
 #if DEBUG
             Debug.Log("OnTapBlueScenePanel");
 #endif
@@ -34,7 +33,7 @@ namespace View
 
         public void OnTapPurpleScenePanel()
         {
-            _selectSceneId.Value = 4; 
+            _selectSceneId.OnNext(4); 
 #if DEBUG
             Debug.Log("OnTapPurpleScenePanel");
 #endif
