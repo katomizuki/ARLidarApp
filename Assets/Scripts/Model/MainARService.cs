@@ -31,10 +31,10 @@ namespace Model
         {
             return PlayerPrefs.GetInt("Effect") switch
             {
-                1 => Resources.Load<Material>("Materials/Shader Graphs_NoiseGiraGira"),
-                2 => Resources.Load<Material>("Materials/Shader Graphs_Pattern"),  
-                3 => Resources.Load<Material>("Materials/Shader Graphs_Scanline"),
-                4 => Resources.Load<Material>("Materials/Shader Graphs_TextureEffect"),
+                1 => Resources.Load<Material>("Materials/Shader Graphs_Pattern"),
+                2 => Resources.Load<Material>("Materials/Shader Graphs_NoiseGiraGira"),
+                3 => Resources.Load<Material>("Materials/Shader Graphs_TextureEffect"),
+                4 => Resources.Load<Material>("Materials/Shader Graphs_Scanline"),
                 _ => throw new ArgumentOutOfRangeException()
             };
         }
